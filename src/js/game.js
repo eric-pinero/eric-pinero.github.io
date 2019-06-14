@@ -4,6 +4,7 @@ class Game {
   constructor(match) {
     this.match = match;
     this.warriors = [];
+    this.endGame = false;
   }
 
   add(object) {
@@ -15,13 +16,14 @@ class Game {
   }
 
 
-  addWarrior(pos, color, shieldColor, facing, player) {
+  addWarrior(pos, color, shieldColor, facing, player, name) {
     const warrior = new Warrior({
       pos: pos,
       color: color,
       shieldColor: shieldColor,
       facing: facing,
       player: player,
+      name: name,
     });
 
     this.add(warrior);
@@ -53,10 +55,11 @@ class Game {
     ctx.fillStyle = Game.BG_COLOR;
     ctx.fillRect(0, 0, Game.DIM_X, Game.DIM_Y);
 
-    ctx.fillStyle = "#ffffff"
-    ctx.font = "30px Arial";
-    ctx.fillText(`Player 1: ${this.match.score[0]}`, 10, 50);
-    ctx.fillText(`Player 2: ${this.match.score[1]}`, 10, 80);
+    ctx.fillStyle = this.warriors[0].color;
+    ctx.font = "30px radioactive";
+    ctx.fillText(`${this.warriors[0].name}: ${this.match.score[0]}`, 80, 25);
+    ctx.fillStyle = this.warriors[1].color;
+    ctx.fillText(`${this.warriors[1].name}: ${this.match.score[1]}`, 690, 25);
 
     this.checkCollisions();
     this.allObjects().forEach((object) => {
@@ -65,7 +68,7 @@ class Game {
             object.draw(ctx);
         } 
     });
-    this.checkWinner();
+    if (!this.endGame) this.checkWinner();
   }
 
   checkWinner(){
@@ -73,13 +76,32 @@ class Game {
           const warrior = this.warriors[i];
 
           if (warrior.winner){
-              this.gameOver(warrior.player);
+              this.endGame = true;
+              this.match.deathSound.play();
+              this.gameOver(warrior);
           }
       }
   }
 
-  gameOver(player){
-    this.match.addScore(player);
+  gameOver(warrior){
+
+    this.match.addScore(warrior);
+
+    this.endGame = false;
+
+    this.warriors[0].warriorPos = [105,70];
+    this.warriors[0].facing = "right";
+    this.warriors[1].warriorPos = [865,70];
+    this.warriors[1].facing = "left";
+
+    for (let i = 0; i < this.warriors.length; i++) {
+      const warrior = this.warriors[i];
+      warrior.shieldStance = "middle";
+      warrior.winner = false;
+      warrior.destroyed = false;
+      warrior.dx = 0;
+    }
+    
   }
 
   isOutOfBounds(pos) {

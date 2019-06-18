@@ -56,8 +56,10 @@ class GameView {
       ctx.shadowBlur = 20;
       ctx.font = "50px radioactive";
       ctx.textAlign = "center"
+      
       ctx.fillText(`${winner.name} wins!`, 500, 100);
       ctx.fillText(`Would you like to play again?`, 500, 200);
+      ctx.fillText('Press Enter', 500, 300);
   
     }
   }

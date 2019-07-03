@@ -16,15 +16,7 @@ My goal in creating this project is to create modern slice of my favorite parts 
 
 ### Functionality and MVP Features
 * Character can move, jump, and move their shield based on keyboard inputs
-+ Walk AD/JL, move shield WS/IK, jump F/;, shield throw G/'
-* Character movements are limited appropriately by the environment (cannot jump on air, fall through floor, walk through walls, etc.)
-* A character is eliminated if their body contacts the other character's shield or if the other     character lands on their head
-* The game correctly identifies when a player is eliminated, ending the round, attributing the point and starting a new round
-* The game tracks each player's wins, ending the match when one player hits three wins
-* Distinct color for the each character and their shield
-* Menu allows players to pause/play game, restart match, and control sound
-+ Spacebar pauses/plays and M mute/unmutes sound
-
++ Left A/J Right D/L, Raise Shield W/I, Lower Shield S/K, Jump F/H
 
 ```javascript
     move(command){
@@ -59,6 +51,16 @@ My goal in creating this project is to create modern slice of my favorite parts 
         }
     }
 ```
+
+* Character movements are limited appropriately by the environment (cannot jump on air, fall through floor, walk through walls, etc.)
+* A character is eliminated if their body contacts the other character's shield or if the other     character lands on their head
+* The game correctly identifies when a player is eliminated, ending the round, attributing the point and starting a new round
+* The game tracks each player's wins, ending the match when one player hits three wins
+* Distinct color for the each character and their shield
+* Menu allows players to pause/play game, restart match, and control sound
++ Spacebar pauses/plays and M mute/unmutes sound
+
+
 
 ### Implementation
 * Tuesday - Skeleton of character movement is completed

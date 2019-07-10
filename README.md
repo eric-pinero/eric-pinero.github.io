@@ -7,7 +7,9 @@
 * Webpack to bundle script and compile JS as needed
 * HTML5 and CSS3 for styling and presentation
 
-<img width="1436" alt="Screen Shot 2019-07-03 at 11 17 47 AM" src="https://user-images.githubusercontent.com/34456998/60604117-f600c400-9d84-11e9-9d35-29b6d358b7fe.png">
+
+![](a-war.gif)
+<!-- <img width="1436" alt="Screen Shot 2019-07-03 at 11 17 47 AM" src="https://user-images.githubusercontent.com/34456998/61001745-32589500-a32e-11e9-9e67-84b4d506acbf.png"> -->
 
 
 ### Background and Overview

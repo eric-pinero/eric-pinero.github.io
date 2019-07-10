@@ -8,14 +8,10 @@
 * HTML5 and CSS3 for styling and presentation
 
 
-![](./assets/a-war-full.gif)
-<!-- <img width="1436" alt="Screen Shot 2019-07-03 at 11 17 47 AM" src="https://user-images.githubusercontent.com/34456998/61001745-32589500-a32e-11e9-9e67-84b4d506acbf.png"> -->
-
-
 ### Background and Overview
 My goal in creating this project is to create modern slice of my favorite parts of 80s and 90s arcade games. The game has a straightforward appearance and controls, making it easy to pick up. It is polished enough that there is a wide range of options created by the few controls. There are two characters, each controlled by a player. Each character can walk forwards, backwards, and can jump. Additionally, each player has a shield that can be held in three positions, top, middle, and low. A player wins by hitting the other player with their shield in an area not protected by a shield, or by jumping on their head. If a held shield contacts the other player's shield, are sent in opposite directions, at a speed corresponding to the speed of the collision. The first player to win three rounds wins the game.
 
-<img width="1440" alt="Screen Shot 2019-07-03 at 11 24 19 AM" src="https://user-images.githubusercontent.com/34456998/60604211-2b0d1680-9d85-11e9-8b71-7cf9378a003a.png">
+![](./assets/a-war-full.gif)
 
 ### Functionality and MVP Features
 * Character can move, jump, and move their shield based on keyboard inputs

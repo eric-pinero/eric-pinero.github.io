@@ -8,7 +8,7 @@
 * HTML5 and CSS3 for styling and presentation
 
 
-![](./assets/a-war.gif)
+![](./assets/a-war-full.gif)
 <!-- <img width="1436" alt="Screen Shot 2019-07-03 at 11 17 47 AM" src="https://user-images.githubusercontent.com/34456998/61001745-32589500-a32e-11e9-9e67-84b4d506acbf.png"> -->
 
 

@@ -1,5 +1,5 @@
 # Atomic Warriors
-(eric-pinero.github.io "Live Game")
+[Live Game](https://eric-pinero.github.io)
 
 ### Architecture and Technologies
 * JavaScript for game logic
